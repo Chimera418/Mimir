@@ -1,0 +1,711 @@
+# Mímir — A Database-Driven Git-Inspired Version Control System
+
+You are my senior software engineer, database architect, and full-stack mentor.
+
+We are building **Mímir**, a complete Git-inspired Version Control System where **MongoDB is the core of the entire application**.
+
+**Mímir** is named after the Norse keeper of wisdom and memory. Like the Well of Mímir preserved knowledge, this system preserves the complete history of software development—repositories, branches, commits, file versions, and collaboration events—inside the database.
+
+This is a **DBMS semester project**, so every architectural decision must prioritize **database engineering over frontend development**.
+
+---
+
+## Existing Resources (Use These First)
+
+Before writing any code, inspect these resources and reuse them wherever possible.
+
+### Existing Git-like VCS (Primary Codebase)
+
+**Local Project**
+
+`C:\Users\anees\Desktop\Projects\Version Control System`
+
+**GitHub Backup**
+
+`https://github.com/Chimera418/Version-Control-System`
+
+This project already contains working implementations of:
+
+* Repository management
+* Commit engine
+* SHA-256 hashing
+* Merkle Trees
+* Commit history
+* File version handling
+* CLI implementation
+* Visualization
+* Tests
+
+Do **not** rebuild these systems unnecessarily.
+
+Reuse and adapt these modules wherever possible:
+
+* `repository.py` → Repository engine
+* `commit.py` → Commit logic
+* `merkle_tree.py` → Hashing & integrity
+* `visualization.py` → Commit graph concepts
+* `vcs_core/` → Internal abstractions
+
+Refactor these concepts into a **Node.js + MongoDB** architecture while preserving their behavior.
+
+### Project Report (Source of Truth)
+
+`C:\Users\anees\Desktop\Sem 5\DBMS\Project\CodeVault_DBMS_Project_Abstract.pdf`
+
+The report defines the intended scope and should guide implementation decisions.
+
+---
+
+## Tech Stack
+
+* **Frontend:** React.js
+* **Backend:** Node.js + Express.js
+* **Database:** MongoDB
+* **ODM:** Mongoose
+* **Authentication:** JWT + bcrypt
+* **Version Integrity:** SHA-256
+* **Architecture:** `React → Express REST API → MongoDB`
+
+---
+
+## Execution Mode
+
+Work autonomously like a senior engineer shipping a production-ready MVP.
+
+* Inspect the existing VCS before writing new code.
+* Reuse working algorithms instead of rebuilding them.
+* Create a development roadmap automatically.
+* Complete one feature before moving to the next.
+* Keep the project runnable after every milestone.
+* Fix bugs immediately without waiting for approval.
+* Continue through all implementation phases automatically.
+
+Only stop if:
+
+1. A required credential or external configuration is unavailable.
+2. Two technically incompatible requirements exist.
+3. An irreversible destructive action would affect existing user data.
+4. A decision cannot reasonably be inferred.
+
+Otherwise, make the engineering decision and continue.
+
+---
+
+## Antigravity Skills (Mandatory)
+
+Use Antigravity's installed skills strategically throughout development.
+
+### Primary Implementation
+
+* `/full-stack-orchestration-full-stack-feature`
+
+Use this as the primary workflow for implementing complete end-to-end features across React, Express, and MongoDB.
+
+### Architecture
+
+* `/architecture-patterns`
+* `/c4-architecture-c4-architecture`
+
+Use these when designing backend architecture, project structure, service boundaries, and system diagrams.
+
+### Backend
+
+* `/api-design-principles`
+
+Use this for REST API design, validation, error handling, and endpoint conventions.
+
+### Frontend
+
+* `/react-modernization`
+
+Use this for building a clean, maintainable React architecture with modern patterns.
+
+### Refactoring
+
+* `/code-refactoring-refactor-clean`
+
+Use this when adapting the existing VCS implementation into the new architecture.
+
+### Testing
+
+* `/unit-testing-test-generate`
+* `/e2e-testing-patterns`
+
+Generate unit tests and end-to-end tests for critical workflows.
+
+### Security
+
+* `/security-auditor`
+
+Audit authentication, authorization, JWT implementation, MongoDB security, and API vulnerabilities.
+
+Use these skills proactively whenever they are the best tool for the current task.
+
+---
+
+## Core Philosophy
+
+MongoDB must be the **heart of the project**, not merely a storage layer.
+
+The application should exist to demonstrate real DBMS concepts through a practical Git-inspired platform.
+
+The final project must clearly showcase:
+
+* Data Modeling
+* Entity Relationships
+* Schema Validation
+* ObjectId References
+* Indexing
+* Constraints
+* Transactions
+* Aggregation Pipelines
+* Versioned Data
+* Query Optimization
+* Data Integrity
+* Analytics
+
+The examiner should immediately recognize that the database drives the entire application.
+
+---
+
+## Build the Complete System
+
+Build the project completely.
+
+* No placeholders.
+* No fake data in the final application.
+* No unfinished modules.
+* Every feature must work end-to-end.
+
+---
+
+## Development Priority
+
+Follow this order unless dependencies require otherwise.
+
+1. Project setup
+2. Database architecture
+3. Authentication
+4. Repository system
+5. Commit engine integration
+6. Branch management
+7. File versioning
+8. Pull requests
+9. Issues
+10. Analytics dashboard
+11. Notifications
+12. UI polish
+13. Documentation
+
+---
+
+## Database-First Development
+
+Before building the UI:
+
+1. Design the conceptual ER model.
+2. Create the normalized relational representation (up to 3NF).
+3. Map it to MongoDB collections.
+4. Decide where to embed documents versus use ObjectId references.
+5. Design indexes based on real query patterns.
+
+---
+
+## Core Collections
+
+Implement complete support for:
+
+* Users
+* Repositories
+* Repository Members
+* Branches
+* Commits
+* Files
+* File Versions
+* Tags
+* Merge Operations
+* Pull Requests
+* Pull Request Comments
+* Issues
+* Issue Comments
+* Labels
+* Releases
+* Activity Logs
+* Notifications
+
+For every collection define:
+
+* Fields
+* Data types
+* Required values
+* Validation
+* References
+* Indexes
+* Constraints
+* Relationship behavior
+
+---
+
+## User System
+
+Implement real authentication.
+
+Each user has:
+
+* Username
+* Email
+* Hashed Password
+* Avatar
+* Bio
+* Role
+* Account Status
+* Created Date
+* Last Login
+
+Features:
+
+* Register
+* Login
+* Logout
+* Edit Profile
+* Change Password
+* JWT Authentication
+* Authorization
+
+Passwords must never be stored in plain text.
+
+---
+
+## Repository System
+
+Support:
+
+* Create Repository
+* Rename Repository
+* Delete Repository
+* Archive Repository
+* Public / Private Visibility
+* Default Branch
+* Collaborator Management
+
+Every repository maintains relationships with:
+
+* Owner
+* Members
+* Branches
+* Commits
+* Files
+* Pull Requests
+* Issues
+* Releases
+* Activity Logs
+
+---
+
+## Collaboration & Roles
+
+Implement repository permissions.
+
+Roles:
+
+* Owner
+* Maintainer
+* Developer
+* Viewer
+
+Store permissions in MongoDB and enforce them through backend middleware.
+
+---
+
+## Branches
+
+Support:
+
+* Create
+* Switch
+* Delete
+* Protect
+
+Each branch stores:
+
+* Repository
+* Name
+* Head Commit
+* Creator
+* Created Timestamp
+
+Branch names remain unique within a repository.
+
+---
+
+## Commit System
+
+This is one of Mímir's flagship features.
+
+Reuse the existing VCS implementation wherever possible.
+
+Each commit stores:
+
+* Repository
+* Branch
+* Parent Commit(s)
+* Author
+* Commit Message
+* SHA-256 Hash
+* Timestamp
+* Merkle Root
+
+Represent history as a **Git-inspired Directed Acyclic Graph (DAG)**.
+
+Support:
+
+* Single-parent commits
+* Merge commits
+* Branch divergence
+* Branch convergence
+* Efficient history traversal
+
+Build a **Commit Explorer** where each commit displays:
+
+* Commit SHA
+* Parent Commit(s)
+* Branch
+* Author
+* Timestamp
+* Files Changed
+* Merkle Root
+* Position in the commit graph
+
+---
+
+## Merkle Trees
+
+Reuse the existing Merkle Tree implementation.
+
+Adapt it so that:
+
+* File contents generate hashes.
+* Commits reference tree structures.
+* Integrity verification becomes database-backed.
+
+This should become one of Mímir's distinguishing technical features.
+
+---
+
+## File Versioning
+
+Maintain complete version history.
+
+Separate:
+
+* File metadata
+* Individual file versions
+
+Store:
+
+* Repository
+* File Path
+* Content Hash
+* Commit Reference
+* Version Number
+* File Size
+* Timestamp
+
+Support:
+
+* Current file state
+* Previous versions
+* Version comparison
+* File history
+
+---
+
+## Pull Requests
+
+Implement database-backed pull requests.
+
+Support:
+
+* Open
+* Review
+* Comment
+* Merge
+* Close
+
+Maintain relationships with:
+
+* Repository
+* Source Branch
+* Target Branch
+* Author
+* Merge Commit
+
+---
+
+## Issues
+
+Implement issue tracking.
+
+Support:
+
+* Create
+* Assign
+* Label
+* Comment
+* Close
+* Reopen
+
+Everything should be linked through MongoDB references.
+
+---
+
+## Tags & Releases
+
+Support:
+
+* Create Tags
+* Delete Tags
+* Create Releases
+* Associate Releases with Commits
+
+---
+
+## Activity Logging
+
+Maintain a complete audit trail.
+
+Record events such as:
+
+* Login
+* Repository Creation
+* Branch Creation
+* Commit
+* Merge
+* Pull Request Activity
+* Issue Activity
+* Tag Creation
+
+Use this collection to power dashboards.
+
+---
+
+## Notifications
+
+Implement persistent notifications.
+
+Examples:
+
+* Added as Collaborator
+* Pull Request Opened
+* Merge Completed
+* Issue Assigned
+* Mentioned by Another User
+
+---
+
+## Search
+
+Implement indexed search across:
+
+* Users
+* Repositories
+* Commits
+* Files
+* Issues
+
+Use MongoDB indexes appropriately.
+
+---
+
+## Analytics (Critical for DBMS)
+
+Use MongoDB aggregation pipelines extensively.
+
+Build dashboards showing:
+
+* Commits per Repository
+* Commits per User
+* Most Active Contributors
+* Most Modified Files
+* Branch Statistics
+* Merge Statistics
+* Pull Request Statistics
+* Issue Statistics
+* Repository Activity Timeline
+* User Contribution History
+* Repository Growth
+
+All analytics should be computed by MongoDB—not React.
+
+---
+
+## Database Integrity
+
+Implement strong constraints using MongoDB.
+
+Examples:
+
+* Unique usernames
+* Unique emails
+* Unique branch names within repositories
+* Unique tag names within repositories
+* Valid ObjectId references
+* Duplicate collaborator prevention
+* Enum validation
+* Required fields
+
+Use:
+
+* Mongoose Validation
+* Middleware
+* Unique Indexes
+* Compound Indexes
+* Transactions
+
+---
+
+## Transactions
+
+Use MongoDB transactions whenever multiple collections are affected.
+
+### Creating a Commit
+
+* Create Commit
+* Create File Versions
+* Update Branch Head
+* Record Activity
+
+### Merging Branches
+
+* Validate Branches
+* Create Merge Commit
+* Update Branch Head
+* Update Pull Request
+* Record Activity
+
+Operations must succeed atomically or roll back completely.
+
+---
+
+## Backend
+
+Use a clean Express architecture.
+
+```text
+backend/
+  config/
+  models/
+  controllers/
+  routes/
+  services/
+  middleware/
+  validators/
+  utils/
+```
+
+Keep business logic separate from HTTP handling.
+
+---
+
+## Frontend
+
+Build a **GitHub-quality** interface with Apple's clean interaction principles.
+
+Design goals:
+
+* Dark-first
+* Glassmorphism where appropriate
+* Smooth micro-animations
+* Clean typography
+* Minimal clutter
+* Professional developer tooling aesthetic
+
+Pages:
+
+* Landing
+* Login
+* Register
+* Dashboard
+* User Profile
+* Repository Explorer
+* Repository Details
+* Branches
+* Commit Timeline
+* Commit Explorer
+* File Browser
+* File History
+* Pull Requests
+* Issues
+* Releases
+* Analytics
+* Collaborators
+* Notifications
+* Settings
+
+Every page must consume real backend APIs.
+
+---
+
+## Seed Data
+
+Generate realistic interconnected data.
+
+Include:
+
+* Multiple Users
+* Multiple Repositories
+* Multiple Branches
+* Large Commit History
+* File Versions
+* Pull Requests
+* Issues
+* Comments
+* Activity Logs
+* Notifications
+
+The seeded database should immediately demonstrate relationships and analytics.
+
+---
+
+## Documentation
+
+Generate complete documentation alongside development.
+
+Include:
+
+* Problem Statement
+* Objectives
+* Scope
+* Architecture
+* C4 Diagrams
+* ER Diagram
+* Collection Design
+* Relationship Mapping
+* Validation Rules
+* Index Design
+* Aggregation Pipelines
+* Transactions
+* API Documentation
+* Existing VCS Integration
+* Database Flow
+* Setup Guide
+* Viva Notes
+* Screenshots
+
+---
+
+## Definition of Done
+
+The project is complete only when:
+
+* Every major feature works end-to-end.
+* MongoDB contains realistic interconnected data.
+* All APIs are connected to the frontend.
+* Authentication is functional.
+* Repositories, branches, commits, merges, tags, and history work.
+* The Commit Explorer visualizes the DAG.
+* Repository analytics are powered by MongoDB aggregation.
+* The application can be demonstrated live without mock data.
+* Documentation is complete enough for project submission and viva.
+
+The final result should feel like a professional Git-based collaboration platform whose primary innovation is a **database-centric architecture**, where MongoDB manages version history, relationships, integrity, and analytics while preserving the behavior of the existing VCS implementation.

@@ -1,0 +1,28 @@
+{
+  "name": "mimir",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node --test backend/tests/*.test.js",
+    "seed": "node backend/seeds/seed.js",
+    "demo": "node backend/scripts/demo_viva.js",
+    "dev": "node backend/server.js",
+    "frontend": "npm --prefix frontend run dev"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "cors": "^2.8.6",
+    "dotenv": "^18.0.4",
+    "express": "^5.2.1",
+    "express-validator": "^7.3.2",
+    "helmet": "^8.3.0",
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^8.13.2",
+    "morgan": "^1.12.1"
+  }
+}
