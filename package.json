@@ -7,8 +7,12 @@
     "test": "node --test backend/tests/*.test.js",
     "seed": "node backend/seeds/seed.js",
     "demo": "node backend/scripts/demo_viva.js",
+    "cli": "node backend/cli.js",
     "dev": "node backend/server.js",
     "frontend": "npm --prefix frontend run dev"
+  },
+  "bin": {
+    "mimir": "./backend/cli.js"
   },
   "keywords": [],
   "author": "",

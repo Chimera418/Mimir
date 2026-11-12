@@ -3,7 +3,7 @@
 > **A Git-inspired, distributed version control platform built on the MERN stack and MongoDB.**  
 > Designed as a full-featured DBMS academic project demonstrating **ACID Transactions**, **Directed Acyclic Graphs (DAG)**, **Merkle Tree Cryptographic Integrity**, **Optimistic Concurrency Control**, and **Immutable Database Auditing**.
 
-[![Tests](https://img.shields.io/badge/tests-17%20passed-success)](file:///backend/tests/)
+[![Tests](https://img.shields.io/badge/tests-22%20passed-success)](file:///backend/tests/)
 [![DBMS](https://img.shields.io/badge/DBMS-Semester%20Project-blue)]()
 [![Stack](https://img.shields.io/badge/Stack-MERN%20%2B%20MongoDB-purple)]()
 [![License](https://img.shields.io/badge/License-MIT-green)]()
@@ -133,6 +133,22 @@ Test Suites:
 - [`backend/tests/acid.test.js`](file:///backend/tests/acid.test.js): Atomicity, simulated failure rollback, OCC lost update prevention, branch protection rules.
 - [`backend/tests/audit_recovery.test.js`](file:///backend/tests/audit_recovery.test.js): Audit querying/filtering/sorting, non-destructive forward-moving revert.
 - [`backend/tests/conflicts.test.js`](file:///backend/tests/conflicts.test.js): LCA merge base search, 3-way clean merge, Git conflict markers generation.
+
+### Interactive & Scriptable Mímir CLI
+Mímir includes a standalone, MongoDB-native terminal shell and CLI tool:
+```bash
+# Launch interactive REPL shell:
+npm run cli
+
+# Or execute commands directly:
+npm run cli -- status
+npm run cli -- log -n 5
+npm run cli -- verify
+npm run cli -- acid-test
+npm run cli -- lca main feature/auth
+npm run cli -- diff feature/auth main
+npm run cli -- analytics stats
+```
 
 ### Run Live Viva CLI Demonstration
 For examiners and demonstration presentations:

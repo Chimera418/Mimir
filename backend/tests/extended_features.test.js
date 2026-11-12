@@ -11,6 +11,7 @@ const { describe, it, before, after } = require('node:test');
 const assert = require('node:assert/strict');
 const path = require('path');
 const dotenv = require('dotenv');
+const mongoose = require('mongoose');
 
 dotenv.config({ path: path.join(__dirname, '../.env') });
 const connectDB = require('../config/db');
